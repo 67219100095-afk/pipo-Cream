@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<title>PRODUCT</title>
+
+<style>
+/* พื้นฐาน */
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background-color:#ffe4ec; /* ชมพูอ่อน */
+}
+
+/* แบนเนอร์ */
+.header img{
+    width:100%;
+    height:auto;
+}
+
+/* เมนู */
+.menu{
+    background-color:#f8c8dc; /* ชมพูพาสเทล */
+    padding:30px 10px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+.menu a{
+    text-decoration:none;
+}
+
+.menu img{
+    width:120px;
+    height:120px;
+    background:#fff;
+    padding:15px;
+    border-radius:20px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.menu img:hover{
+    transform:scale(1.1);
+}
+
+/* ส่วนติดตามสินค้า */
+.track{
+    background:#ffffff;
+    width:400px;
+    margin:40px auto;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 4px 15px rgba(0,0,0,0.15);
+}
+
+.track h2{
+    color:#d81b60;
+}
+
+.track input{
+    width:80%;
+    padding:10px;
+    border-radius:10px;
+    border:1px solid #ccc;
+    margin-top:10px;
+}
+
+.track button{
+    margin-top:15px;
+    padding:10px 25px;
+    background:#f48fb1;
+    border:none;
+    border-radius:20px;
+    color:#fff;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.track button:hover{
+    background:#ec407a;
+}
+
+#result{
+    margin-top:15px;
+    color:#c2185b;
+    font-weight:bold;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- แบนเนอร์ -->
+<div class="header">
+    <img src="Green Bohemian Coming Soon Twitter Header (1400 x 200 px).png" alt="">
+</div>
+
+<!-- เมนู -->
+<div class="menu">
+    <a href="index1-.html"><img src="รูปHOME.png" alt="HOME"></a>
+    <a href="index2-.html"><img src="รูปproduct.png" alt="PRODUCT"></a>
+    <a href="index3-.html"><img src="รูปBODY MASK.png" alt="BODY MASK"></a>
+    <a href="index4-.html"><img src="รูปBODY MASK (2).png" alt="BODY CARE"></a>
+    <a href="index5-.html"><img src="รูปPROMO.png" alt="PROMO"></a>
+    <a href="index6-.html"><img src="รูปREVIEWS (2).png" alt="REVIEWS"></a>
+    <a href="index7-.html"><img src="รูปSETS.png" alt="SETS"></a>
+    <a href="index8-.html"><img src="รูปREVIEWS.png" alt="BEST"></a>
+    <a href="index9-.html"><img src="รูปHOW TO.png" alt="HOW TO"></a>
+    <a href="index10-.html"><img src="รูปOEDER.png" alt="ORDER"></a>
+    <a href="#"><img src="รูปTRACK.png" alt="TRACK"></a>
+</div>
+
+<!-- ติดตามการสั่งซื้อ -->
+<div class="track">
+    <h2>ติดตามการสั่งซื้อ</h2>
+    <input type="text" id="orderid" placeholder="กรอกเลขคำสั่งซื้อ">
+    <br>
+    <button onclick="checkOrder()">ตรวจสอบสถานะ</button>
+    <p id="result"></p>
+</div>
+
+<script>
+function checkOrder(){
+    document.getElementById("result").innerHTML =
+    "สถานะสินค้า : กำลังจัดส่ง 🚚";
+}
+</script>
+
+</body>
+</html>

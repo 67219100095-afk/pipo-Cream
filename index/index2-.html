@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<title>สินค้า</title>
+
+<style>
+body{
+    font-family: Tahoma, sans-serif;
+    margin: 0;
+    background: linear-gradient(to right, #fdecef, #ffe6f0);
+}
+
+/* แบนเนอร์ */
+.banner img{
+    width: 100%;
+    display: block;
+}
+
+/* เมนู */
+.menu{
+    background: #ffffff;
+    text-align: center;
+    padding: 12px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.menu img{
+    width: 110px;
+    margin: 6px;
+    transition: 0.3s;
+}
+.menu img:hover{
+    transform: scale(1.1);
+}
+
+/* หัวข้อ */
+h1{
+    text-align: center;
+    margin: 40px 0 20px;
+    color: #c2185b;
+}
+
+/* ตารางสินค้า */
+.product-table{
+    width: 85%;
+    max-width: 1000px;
+    margin: auto;
+    border-collapse: collapse;
+    background: #ffffff;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.product-table th{
+    background: #f8bbd0;
+    padding: 16px;
+    font-size: 18px;
+    color: #880e4f;
+}
+
+.product-table td{
+    padding: 18px;
+    text-align: center;
+}
+
+.product-table tr:nth-child(even){
+    background: #fff7f9;
+}
+
+.product-table img{
+    border-radius: 12px;
+    transition: 0.3s;
+}
+.product-table img:hover{
+    transform: scale(1.05);
+}
+
+/* ปุ่ม */
+.order-btn{
+    display: inline-block;
+    background: #f48fb1;
+    color: white;
+    padding: 10px 22px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+.order-btn:hover{
+    background: #ec407a;
+    transform: scale(1.05);
+}
+
+/* ผลลัพธ์ */
+#result{
+    text-align: center;
+    margin: 30px 0;
+    font-size: 18px;
+    color: #c2185b;
+    font-weight: bold;
+}
+
+/* กลับ */
+.back{
+    text-align: center;
+    margin: 40px;
+}
+.back a{
+    text-decoration: none;
+    color: #c2185b;
+    font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<!-- แบนเนอร์ -->
+<div class="banner">
+<img src="Green Bohemian Coming Soon Twitter Header (1400 x 200 px).png">
+</div>
+
+<!-- เมนู -->
+<div class="menu">
+<a href="index1-.html"><img src="รูปHOME.png"></a>
+<a href="#"><img src="รูปproduct.png"></a>
+<a href="index3-.html"><img src="รูปBODY MASK.png"></a>
+<a href="index4-.html"><img src="รูปBODY MASK (2).png"></a>
+<a href="index5-.html"><img src="รูปPROMO.png"></a>
+<a href="index6-.html"><img src="รูปREVIEWS (2).png"></a>
+<a href="index7-.html"><img src="รูปSETS.png"></a>
+<a href="index9-.html"><img src="รูปHOW TO.png"></a>
+<a href="index10-.html"><img src="รูปOEDER.png"></a>
+<a href="index11-.html"><img src="รูปTRACK.png"></a>
+</div>
+
+<h1>✨ สินค้าของเรา ✨</h1>
+
+<table class="product-table">
+<tr>
+<th>รูปสินค้า</th>
+<th>ชื่อสินค้า</th>
+<th>ราคา</th>
+<th>สั่งซื้อ</th>
+</tr>
+
+<tr>
+<td><img src="bd675ea061bf5d48.jpg" width="180"></td>
+<td><b>ครีมพอกผิว</b></td>
+<td>199 บาท</td>
+<td>
+<a href="index10-.html" class="order-btn" onclick="order('ครีมพอกผิว')">สั่งซื้อ</a>
+</td>
+</tr>
+
+<tr>
+<td><img src="6ce12afc08f75336.jpg" width="180"></td>
+<td><b>ครีมบำรุงผิว</b></td>
+<td>199 บาท</td>
+<td>
+<a href="index10-.html" class="order-btn" onclick="order('ครีมบำรุงผิว')">สั่งซื้อ</a>
+</td>
+</tr>
+
+<tr>
+<td><img src="bd017bf5f67eb47e6b165699ecbc4b4c.jpg" width="180"></td>
+<td><b>สครับผิว</b></td>
+<td>260 บาท</td>
+<td>
+<a href="index10-.html" class="order-btn" onclick="order('สครับผิว')">สั่งซื้อ</a>
+</td>
+</tr>
+
+<tr>
+<td><img src="8a89b2531295469493af5fc4ef5a8c0f~tplv-sdweummd6v-text-logo-v1_QHN1a2hzbWF5Ng==_q75.jpeg" width="180"></td>
+<td><b>สบู่ผิวขาว</b></td>
+<td><b>189 บาท</b></td>
+<td>
+<a href="index10-.html" class="order-btn" onclick="order('สบู่ผิวขาว')">สั่งซื้อ</a>
+</td>
+</tr>
+</table>
+
+<p id="result"></p>
+
+<div class="back">
+<a href="index1-.html">← กลับหน้าหลัก</a>
+</div>
+
+<script>
+function order(product){
+    document.getElementById("result").innerHTML =
+    "✅ คุณเลือกสั่งซื้อ <u>" + product + "</u>";
+}
+</script>
+
+</body>
+</html>

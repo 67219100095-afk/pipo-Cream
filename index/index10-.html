@@ -1,0 +1,227 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>สั่งซื้อสินค้า</title>
+
+<style>
+body{
+    font-family: Tahoma, sans-serif;
+    background: linear-gradient(to right, #f5f5f5, #e8f5e9);
+    margin: 0;
+}
+
+/* แบนเนอร์ */
+.banner img{
+    width: 100%;
+    max-height: 220px;
+    object-fit: cover;
+}
+
+/* เมนู */
+.menu{
+    margin-top: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.menu img{
+    transition: 0.3s;
+}
+.menu img:hover{
+    transform: scale(1.08);
+}
+
+/* กล่องสินค้า */
+.products{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 50px 0;
+}
+
+/* การ์ด */
+.card{
+    background: #fff;
+    width: 320px;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    text-align: center;
+    padding: 25px;
+    transition: 0.3s;
+}
+.card:hover{
+    transform: translateY(-10px);
+}
+
+/* รูป */
+.card img{
+    width: 200px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+.card img:hover{
+    transform: scale(1.05);
+}
+
+/* ชื่อสินค้า */
+.card h2{
+    margin: 20px 0 5px;
+}
+
+/* รายละเอียด */
+.card p{
+    color: #555;
+}
+
+/* ราคา */
+.price{
+    color: #ff2b6a;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* select + input */
+select, input{
+    padding: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* ปุ่ม */
+button{
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.2s;
+    font-weight: bold;
+    margin-top: 10px;
+}
+button:hover{
+    background-color: #388E3C;
+    transform: scale(1.05);
+}
+button:active{
+    transform: scale(0.95);
+}
+
+/* ลิงก์ */
+a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #2e7d32;
+}
+</style>
+
+<script>
+function order(btn, productName){
+    btn.innerHTML = "✓ สั่งซื้อแล้ว";
+    btn.style.background = "#2e7d32";
+    alert("สั่งซื้อ " + productName + " เรียบร้อย");
+}
+</script>
+
+</head>
+
+<body>
+
+<!-- แบนเนอร์ -->
+<div class="banner">
+<img src="Green Bohemian Coming Soon Twitter Header (1400 x 200 px).png">
+</div>
+
+<!-- เมนู -->
+<table border="1" align="center" class="menu">
+<tr align="center">
+<td><a href="index1-.html"><img src="รูปHOME.png" width="120"></a></td>
+<td><a href="index2-.html"><img src="รูปproduct.png" width="120"></a></td>
+<td><a href="index3-.html"><img src="รูปBODY MASK.png" width="120"></a></td>
+<td><a href="index4-.html"><img src="รูปBODY MASK (2).png" width="120"></a></td>
+<td><a href="index5-.html"><img src="รูปPROMO.png" width="120"></a></td>
+<td><a href="index6-.html"><img src="รูปREVIEWS (2).png" width="120"></a></td>
+<td><a href="index7-.html"><img src="รูปSETS.png" width="120"></a></td>
+<td><a href="index8-.html"><img src="รูปREVIEWS.png" width="120"></a></td>
+<td><a href="index9-.html"><img src="รูปHOW TO.png" width="120"></a></td>
+<td><a href="#"><img src="รูปOEDER.png" width="120"></a></td>
+<td><a href="index11-.html"><img src="รูปTRACK.png" width="120"></a></td>
+</tr>
+</table>
+
+<!-- สินค้า -->
+<div class="products">
+
+<div class="card">
+<img src="bd675ea061bf5d48.jpg">
+<h2>ครีมพอกผิว</h2>
+<p>ช่วยให้ผิวนุ่มชุ่มชื้น</p>
+<div class="price">199 บาท</div>
+สูตร :
+<select>
+<option>สูตรนมสด</option>
+<option>สูตรมะเขือเทศ</option>
+<option>สูตรแครอท</option>
+</select><br><br>
+จำนวน :
+<input type="number" value="1" min="1"><br>
+<button onclick="order(this,'ครีมพอกผิว')">สั่งซื้อ</button>
+</div>
+
+<div class="card">
+<img src="6ce12afc08f75336.jpg">
+<h2>ครีมบำรุงผิว</h2>
+<p>บำรุงผิวให้ดูสุขภาพดี</p>
+<div class="price">199 บาท</div>
+สูตร :
+<select>
+<option>สูตรวิตามินซี</option>
+<option>สูตรอโลเวร่า</option>
+<option>สูตรคอลลาเจน</option>
+</select><br><br>
+จำนวน :
+<input type="number" value="1" min="1"><br>
+<button onclick="order(this,'ครีมบำรุงผิว')">สั่งซื้อ</button>
+</div>
+
+<div class="card">
+<img src="bd017bf5f67eb47e6b165699ecbc4b4c.jpg">
+<h2>สครับผิว</h2>
+<p>ช่วยผลัดเซลล์ผิว</p>
+<div class="price">199 บาท</div>
+สูตร :
+<select>
+<option>สูตรกาแฟ</option>
+<option>สูตรมะขาม</option>
+<option>สูตรน้ำผึ้ง</option>
+</select><br><br>
+จำนวน :
+<input type="number" value="1" min="1"><br>
+<button onclick="order(this,'สครับผิว')">สั่งซื้อ</button>
+</div>
+
+<div class="card">
+<img src="8a89b2531295469493af5fc4ef5a8c0f~tplv-sdweummd6v-text-logo-v1_QHN1a2hzbWF5Ng==_q75.jpeg">
+<h2>สบู่ผิวขาว</h2>
+<p>ทำความสะอาดผิวอย่างอ่อนโยน</p>
+<div class="price">189 บาท</div>
+สูตร :
+<select>
+<option>สูตรนม</option>
+<option>สูตรมะนาว</option>
+<option>สูตรสมุนไพร</option>
+</select><br><br>
+จำนวน :
+<input type="number" value="1" min="1"><br>
+<button onclick="order(this,'สบู่ผิวขาว')">สั่งซื้อ</button>
+</div>
+
+</div>
+
+<div align="center" style="margin-bottom:40px;">
+<a href="index1-.html">← กลับหน้าหลัก</a>
+</div>
+
+</body>
+</html>
